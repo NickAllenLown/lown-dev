@@ -18,7 +18,6 @@ Including another URLconf
 from django.contrib import admin
 from django.http.response import HttpResponse
 from django.urls import path, include
-from interests import views
 from django.shortcuts import render
 
 def home_view(request):
@@ -27,5 +26,5 @@ def home_view(request):
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', home_view, name='home-page'),
-    path("interests/", include("interests.urls"))
+    path("interests/", include("lown_dev.interests.urls"))
 ]
